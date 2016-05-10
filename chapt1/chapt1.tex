@@ -1,0 +1,124 @@
+
+
+% Header
+\renewcommand\evenpagerightmark{{\scshape\small Grid Monitoring}}
+\renewcommand\oddpageleftmark{{\scshape\small Chapter 2}}
+
+\renewcommand{\bibname}{References}
+
+\hyphenation{}
+
+\chapter[Premières réflexions]%
+{Premières réflexions}
+\label{premieres_reflexions}
+
+\section{Besoins industriels d'Air Liquide}
+Aujourd'hui, les règles de dimensionnement des fours ATR et POX sont mal maîtrisées. Développée par Lurgi, l'ingénierie des fours ATR/POX d'Air liquide n'est pas encore prédictive et la conception manque d'outils pour dimensionner les brûleurs. Air Liquide veut donc davantage maîtriser les process dans le but de :
+\begin{itemize}
+\item Augmenter la production en sortie de gaz
+\item Maîtriser davantage les rejets
+\item Obtenir des syngazs de meilleurs qualités (?)
+\end{itemize}
+
+Dans ce but, un pilote a été construit en 2004 à Freiberg, reproduisant les conditions des fours industriels. Ce pilote peut fonctionner en plusieurs configurations, notamment ATR. Il dispose de quelques diagnostics, notamment images de la flamme et bilans de masse entrée/sortie. De nombreux tests ont été conduits sur ce brûleur et ces données sont le point de départ du stage.
+
+A travers ce stage, Air Liquide désire :
+\begin{itemize}
+\item Obtenir des règles de dimensionnement pour les brûleur ATR : lois d'échelles par des nombres adimensionnés adaptés, justifier des choix technologiques
+\item Comprendre le comportement des flammes et les mécanismes responsables
+\item Donner de la visibilité au numérique, qui manque aujourd'hui cruellement de données expérimentales pour justifier les modèles
+\item Dans les paramètres observés par Air Liquide, la forme de la flamme est primordiale, on cherche à bien maîtriser la température au niveau de l'entrée du catalyseur
+\end{itemize}
+
+\subsection{Les brûleurs utilisés}
+Le pilote HPPOX peut se mettre en mode ATR et son brûleur porte la dénomination ATR-30norm, ce n'est pas le même brûleur que les brûleurs de production des fours ATR industriels. De part la taille déjà, en revanche, on garde des rapports de géométries similaires, et notamment les angles des aubes à 30 et 20.
+
+\subsection{L'ATR au sein de la R\&D aux loges}
+
+Peu de travaux faits sur les ATR, et la majorité concerne l'équipe MathApp. Les volumes d'ATR vendus sont faibles mais sont toujours des investissements conséquents. Air Liquide s'intéresse de nouveaux aux ATR depuis le rachat de Lurgi mais l'appropriation et la remise en questions de la conception des ATR nécessite du temps.
+
+\section{Déroulé et plans du stage}
+\begin{enumerate}
+\item Travail de bibliographie sur les fours ATR et l'influence du nombre de swirl
+\item Identification des paramètres qui pilotent : Re, Swirl1, Swirl2, rapport impulsion
+\item Etude et dimensionnement des brûleurs à utiliser et de leur conception
+\begin{itemize}
+\item Fabrication industrielle (cas le plus simple et le plus rapide)
+\item Faisabilité du prototypage rapide (le cas échéant)
+\end{itemize}
+\item Pour chaque brûleur :
+\begin{itemize}
+\item Diagnostics expérimentaux
+\item Régimes de flammes
+\item Comparaison avec le pilot HPPOX
+\end{itemize}
+\end{enumerate}
+
+\subsection{Les intuitions initiales Air Liquide}
+
+Au 1er ordre, c'est la diffusion turbulente qui pilote.
+
+Puisqu'on ne peut pas reproduire Freiberg au labo, il faut respecter l'ordre des échelles pour se rapprocher des mécanismes, en particulier regarder l'évolution dans le diagramme Poisot Veynante. On respecterait cette ordre en conservant :
+\begin{itemize}
+\item Nombres de swirls équivalents
+\item Même rapports d'impulsions
+\item Même géométrie
+\item Même vitesse
+\end{itemize}
+Du coup avec des valeurs différentes pour :
+\begin{itemize}
+\item la pression
+\item la richesse
+\item le nombre de Reynolds
+\end{itemize}
+Pour ce qui est de la pression et de la densité, on estime que les mécanismes responsable est davantage le gradient de densité, gradient que l'on veut conserver par le biais des températures (à vérifier).
+
+Concernant la richesse, elle est primordiale dans en combustion prémélangée mais nettement moins en diffusion, dans le mesure ou la flamme se fait en particulier à la stoechiométrie. 
+
+En revanche, il n'y aura pas de réaction de réformage car le méthane sera en défaut. Les diagnostics à comparer avec Freiberg seront donc uniquement des visualisations de flammes. Les canaux seront également inversés entre combustibles et oxydants
+
+\section{The scientific strategy of the internship}
+
+\subsection{The mechanisms driving the topology of the flame}
+
+It must be defined whether the topology of the flame depends on the kinetic or the description of the mixture (diffusion and turbulence). Here are the pros and cons :
+\paragraph{Turbulence is driving the flame}
+\begin{itemize}
+
+\item According to Veynante - Darabiha, the diffusion flame are mostly driven by the turbulence, and the kinetic can considered as infinitely fast. The argument is not fully verified of course here, this is the purpose of the internship of Ru to study the influence of the kinetic on the topology of the flame
+\item This is also an the presumption of Bernard Labegorre and Air Liquide to consider that the turbulent diffusion is the 1st parameter to have an influence on the flame
+\item When taking into account a better mixture with LES computation, the topology of the flame is closer to the one is HPPOX
+
+\end{itemize}
+\paragraph{Kinetic is driving the flame}
+\begin{itemize}
+\item The article (\# ref Milosavljevic, V. D., Taylor, A. M. K. P., and
+Whitelaw, J. H., Imperial College, Department of
+Mechanical Engineering report FS/87/35, (1987).) enhances that a high Reynolds or Swirl number can reach the maximum kinetic velocity so that the kinetic will limit the combustion
+\item When using kinetic schemes instead of infinite kinetic, the flame is shorter
+\end{itemize}
+
+\subsection{Cooperation with Ru}
+
+Ru and I have two approaches than can be gathered. Even if it is not the only task, we both have to reproduce the results of Freiberg burner, me experimentally and Ru through simulation. It the goal is achieved, implying that we have similar flame topologies, flame length and so on, there are benefits to work together :
+\begin{itemize}
+\item To my concern, if Ru and I have the same topology of flame, then assuming certain hypothesis, I can find back the velocity field through the simulations of Ru
+\item To Ru's concern, we can try different experimental configuration to assess the reliability of her simulation
+\end{itemize}
+
+\subsection{Les paramètres expérimentaux}
+\paragraph{Nombre de swirl}
+Le dispositif sera toujours à aubes fixes, on modifiera dans le nouveau bruleur pilote les nombres de swirls en modifiant la répartition des débits axiaux/tangentiels.
+Si on voit que c'est un paramètre de premier ordre, on pourra alors proposer de modifier les swirls sur les bruleurs ATR30-norm, ce qui n'a jamais été fait avant.
+\paragraph{Nombre de Reynolds}
+Sera limité par la capacité du brûleur, on pourra le baisser légèrement mais ce ne sera vraisemblablement pas un paramètre de premier ordre
+\paragraph{rapport d'impulsions}
+Avec des outils d'analyses dimensionnelles type Vaschi Buckingham, on fera peut-être apparaître ce paramètre. Voir son influence dans la littérature.
+\paragraph{Rapport de dillution à l'azote}
+Dans la mesure où il n'y aura pas de réactions de reformage, la vapeur d'eau n'intervient pas et on utilisera de l'azote comme diluant. Le rapport de dilution pourra être intéressant pour diminuer la part de méthane, ainsi diminuer la puissance du bruleur tout en conservant les memes vitesses qu'a Freiberg. Ainsi, c'est pour l'instant un paramètre libre qu'on pourra fitter pour s'accorder à la flamme de Freiberg.
+\paragraph{Qarl number}
+
+\clearpage
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}

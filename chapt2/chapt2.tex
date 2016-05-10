@@ -1,0 +1,113 @@
+\chapter[Revue de Biblio]%
+{Revue de Biblio}
+\label{revue_de_biblio}
+\section{Scale-up et lois d'échelles}
+
+\subsection{Le scale-up peut marcher en éloignant le débit transverse}
+\cite{shigeru_azuhata_scale-up_study_of_gas_composition.pdf_1986}
+Cet article indique que le scale-up peut-être fait si on fait attention au mélange transverse de l'oxydant dans le fuel. Il recommande par exemple d'éloigner fortement l'arrivée d'air transverse comme il le fait avec son brûleur B. 
+
+Comme explication, l'allumage dépend de la pénétration de l'oxydant dans le fuel, à même vitesse un petit brûleur serait favorisé car son diamètre est plus petit (?)
+
+Mais on pourrait également prendre gare à conserver dans le brûleur ce mécanisme.
+
+\subsection{Scale-up with detonation}
+
+\cite{fig_experimental_2016} this article, scale-up has been experimentally studied with detonation flames : with tubes from 5cm to 71cm, the maximum burning velocity has been fitted with a power fit, which has permitted to forecast the burning velocity for the bigger pipe (71cm) before the experimental setup was finished. The accuracy of the prediction is very good. The power of the fit is not given.
+
+But no explanations of the scale mechanisms is given in this article.
+\section{Influence of the Reynolds number}
+
+Article \cite{milosavljevic_influence_1990}  says that increasing the Reynolds number shortens the flame length. If it is due to Reynolds number, it can be bad for the internship, otherwise if it depends more on the bulk velocity, then since we will use the same velocities as the HPPOX, it should be ok.
+
+\section{Influence of the Swirl number}
+
+\subsection{Recirculation}
+
+Recirculation is generally not observed for swirl numbers below 0.4, so most swirl-stabilized burners are designed for swirl numbers greater than 0.6.
+
+\subsection{Solid body rotation}
+
+On a normalement un solid body rotation pour $r<R/2$ \cite{toh_axial_2010} , cela peut monter plus haut si le swirl augmente \cite{durox_flame_2013}.
+
+\subsection{Flame topology}
+
+between two kinds of burners, the flame topologies can vary a lot, even with the same swirl number. It is particularly the case depending on axial/radial swirl. For example, the shapes are very different between \cite{paul_jourdaine_nom_effect_2016} and \cite{durox_flame_2013}.
+
+From an analysis point of view, it clearly shows that the swirl number is not the only adimensional quantity to describe a swirling flow. The quarl angle is another one, but even if with a quarl angle of $0^\circ$, we need another one to describe why we find a peak in Paul Jourdaine's profile and not the ones of Durox.
+
+\subsection{As the increasing of Reynolds narrows the lean limit, the increasing Swirl may narrows the lean limit as well}
+
+When the bulk velocity increases (equivalent to the Reynolds number), the kinetics reaches its limits so that it increases the lean limit (the rise in the Re is not followed by a rise in the kinetics (which has reached its maximum) so that the flame blows out.
+
+It may be the same case with Swirl number \cite{milosavljevic_influence_1990}. Since the rise in Swirl implies a rise in the tangential velocity, once the maximum kinetic velocity is reached, the rise in the Swirl number can only narrows the lean limits. But it does not explain the bulges of the articles in Fig 3 (there are some discrete values of Swirl where the lean limit is very high, and the flame very stable).
+
+\subsection{Central recirculation zone (CRZ) is independent of S}
+This is not the case with the flame length! 
+
+L'article\cite{milosavljevic_influence_1990}  fait varier grandement le nombre de swirls, le quarl et le type de brûleurs pour en tirer ces conclusions, for a given equivalence ratio:
+\begin{itemize}
+\item The recirculation length is independant of the Swirl number, of the bulk injection (equivalent to Reynolds) and of a second order with the type of nozzle used
+\item Strongly depends on the quarl number (CRZ increases with the quarl)
+\end{itemize}
+
+
+\subsection{PVC frequency is a linear function of Re}
+\cite{martinelli_experimental_2007} According to that article, it is admitted today that the precessing frequency of the PVC is a linear function of the Reynolds number, assuming swirl number S =cste.
+
+\subsection{Using the same adiabatic flame temperature in order to compare different dilutions}
+Paul Jourdaine \cite{paul_jourdaine_nom_effect_2016} showed that the topologies of flame are the same between C02 and N2 if the adiabatic flame temperature is respected. The dilution is consequently of second order, this is perfect for the purpose of the internship since it is planned to use another diluent than the PPOX. This is a very powerful results, and the results are still verified if the Swirl number or the quarl number vary.
+
+\section{The quarl angle}
+
+"Ouvreau" in french, the quarl is a piece used in the burner in order to protect the flame from the edge of the burner. One can give a certain angle and \cite{paul_jourdaine_nom_effect_2016} studied the influence of quarl number on a premixed flame. From $0^\circ $ to $45^\circ $, the increase of the quarl number decreases the flame length, and flatten the shape of the flame. Above all, the use of the quarl number is another degree of freedom to shape the flame according to the industrial needs.
+
+According to\cite{milosavljevic_influence_1990}, the CRZ increases as the quarl angles increases.	
+
+\section{The calculation of the Swirl number}
+
+\subsubsection{With a radial swirler}
+
+\cite{durox_flame_2013} This article tackles the difficulties in determining with accuracy the Swirl number. One can find in the literature many formulas, but each case being different, the only way to know the Swirl number is to measure it (with LDV?). The articles criticies the fact that many publications does not take care of the accuracy of the swirl number, so that they can be overestimated or underestimated. Depending on the formulas one choses, there can be error of 100\%. The article study different formulas in a radial swirler, the selected ones at the end are :
+
+\begin{itemize}
+\item $S=\frac{1}{4} \frac{R}{L} tan(\alpha)$ where $R$ is the radius of the swirler and $L$ the height of the radial injection. In this formula, you use the hypothesis of a solid body rotation $u_{\theta}(r)=\Omega r$ and can be easily demonstrated.
+\item The other ones $S=0.75\frac{\bar{u_{\theta}}}{\bar{u_{z}}}$ comes from a fit and is very accurate but recquires to know $\bar{u_{\theta}}$
+\end{itemize}
+
+\subsubsection{With an axial swirler}
+
+The article\cite{palies_combined_2010}  uses an axial swirler and shows the difficulty of calculating a swirl number, a very interesting table compares among different publications the number of swirl, its calculations and the formulas used to compute it. Its own formula to calculate the swirl number is :$S=2/3 tan(\theta)$, and gives 100\% of inacuracy when compared to the integration of LDV profile.
+
+\subsubsection{The strategy for the internship}
+
+Hence, for the purpose of the internship, assuming that LDV is unreachable in Calhory furnace,  here are 3 possibilities to overcome the situation :
+\begin{enumerate}
+\item With a literary review, try to choose a similar burner to approach the swirl number. Or choose it arbitrarily, knowing that it would be false, but only taking into account it relatively
+\item Simulating it on Fluent, with non reacting flow. The difficulty will be to create the geometry of the burner, which is very complicated
+\item Use another metric to observe something else on the burner to guess the Swirl number (only possible if scale-up rules are found, or reliable behavior rules of the swirl number)
+\end{enumerate}
+
+The main problem is that the rules to compute the swirl number will first depend on the geometry of the burner. One can identify three kinds of swirler : 
+\begin{enumerate}
+\item the radial swirler : \cite{durox_flame_2013}, the burner with axial and tangential injections
+\item the axial swirler : it is the case of the burner ATR-30
+\item a mix of the two \cite{paul_jourdaine_nom_effect_2016} as it is the case in OXYTEC, or the pilot we want to build.
+\end{enumerate}
+
+To me, the determination of the swirl number must be the most accurate possible. At least, we must fully understand the perimeter of the calculation of the swirl number choosen, these are the very important reasons why I focused on that specific matter :
+\begin{enumerate}
+\item The whole purpose of the internship is to show that turbulent diffusion is the first parameter who drives the topology of the flame. The industrial parameter we can change is the swirl number through the geometry of the burner. Hence, one cannot neglet the accuracy of the very parameter whose importance is to be proven on the behaviour of the flame.
+\item Since we want to prove that pressure and equivalence ratio matter less than swirl and turbulent diffusion, let's be accurate on the swirl geometry!
+\item The litterature can give us qui accurate topology of flames according to the swirl number. For instance, one knows that the CRZ is going to appear for S bigger than 0.4-0.6 We cannot content ourself with 100\% inacuray on the swirl number
+\item We have two swirl numbers
+\item The quality publications check the accuracy of the chosen formula by measuring with PIV/LDV the velocity distribution at the outlet of the burner in order to intergrate them and calculate the quite accurate swirl number. This is not possible in this internship, since we cannot use advanced optical diagnosis.
+\end{enumerate}
+
+
+
+ 
+
+
+
+
