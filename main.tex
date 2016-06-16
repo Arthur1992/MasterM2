@@ -35,6 +35,7 @@
 \usepackage[pdftex]{graphicx}
 \fi
 %\usepackage{psfrag}
+\usepackage{amsmath}
 \usepackage{chappg}     % page numbering (chapno-pageno), for ToC
 \usepackage{url}        % for better url typesetting
 \usepackage{expdlist}   % Expanded description (e.g. better alignement) -> needed for acronym_expdlist package
@@ -192,11 +193,13 @@ Conception et dimensionnement de technologies de combustion.}
 
 \baselineskip 13.0pt
 \include{app1.tex}
-\include{chapt1/chapt1}
-\include{chapt2/chapt2}
-\include{chapt_an_dim/chapt_an_dim}
+\include{Strategy/chapt1}
+\include{Swirl_number_review/chapt2}
+\include{Pi_theorem_Interferometry/chapt_an_dim}
 \include{chapt_filiere/chapt_filiere}
 \include{diagnostic/diagnostic}
+\include{New_burner/size_calculation}
+\include{Flame_length_review/review}
 
 \appendix
 \include{Appendice/protocole_strio}
@@ -209,6 +212,6 @@ Conception et dimensionnement de technologies de combustion.}
 
 
 \bibliographystyle{plain}
-\bibliography{Zoterobib2.bib}
+\bibliography{Zoterobib3.bib}
 
 \end{document}
