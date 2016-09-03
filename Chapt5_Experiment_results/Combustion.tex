@@ -8,7 +8,13 @@
 
 \subsection{Accuracy of visible image }
 
-This section shows all the difficulties occurring when camera are used as diagnostic with high accuracy expectancies.  When taking the picture of an image, the signal will depend linearly on the ISO sensibility and the exposure time. Hence, before any results or interpretation one must testify that the post processing and the results does not depend on the acquisition parameters at all. Otherwise, the given flame length would not be reliable and no interpretation or comparison could be drawn. Unfortunately, the best solution would have been to choose to reason at the same acquisition parameters (ISO/exposure time), but this solution does not work at all for serveral reasons :
+This section shows all the difficulties occurring when camera are used as diagnostic with high accuracy expectancies.  When taking the picture of an image, the signal will 
+depend linearly on the ISO sensibility and the exposure time. Hence, before any results or interpretation one must testify that the 
+post processing and the results does not depend on the acquisition parameters at all. Otherwise, 
+the given flame length would not be reliable and no interpretation or comparison could be drawn. 
+Unfortunately, the best solution would have been to choose to reason at the same acquisition parameters (ISO/exposure time), 
+but this solution does not work at all for serveral reasons :
+
 \begin{itemize}
 \item The acquisition parameters of the main flame to be compared with (Freiberg flame) are not known, even raw images are not provided in the internship
 \item With the same acquisition paramers, a flame without soot (mainly blue) will produce a very poor signal (ISO has then to be increased), whereas a flame with much soot will be so bright that the exposure time has to be drastically reduced in order to protect the sensor and not to have a fully saturated image
@@ -54,15 +60,16 @@ On the right, ten iso contours are drawn for the corresponding photos. What can 
   \caption{On the top : visible image, on the bottom, chimiluminescence}
  \label{contour}
 \end{figure}
-\subsection{The flame the ratio only matters}
-
+\subsection{The flame topology does depend on the adimensional identified number }
+The figure \label{fig_power_comparison} shows that as it is expected in \#ref Veynantes, the flame length is not driven by the Reynolds number, in the
+turbulent case.
  \begin{figure}[!h]
   \centering
 \includegraphics[width=0.3\textwidth]{fig/puissance/DSC_3683puissance.png}
 \includegraphics[width=0.3\textwidth]{fig/puissance/DSC_3689puissance.png}
 \includegraphics[width=0.3\textwidth]{fig/puissance/DSC_3694puissance.png}
-  \caption{Averaged $CH^*$ signal of two flames. On the left : $ISO_{A}$, Prototype burner, $X_{1,CH_{4}}=0.75$, $M =0.731$,$S=0$. On the right : $ISO_{B}$, ATR burner, $X_{1,CH_{4}}=0.5$, $M = 1.438$}
- \label{fig_ISO_brute}
+  \caption{Three different Reynolds number flame with same topology}
+ \label{fig_power_comparison}
 \end{figure}
 
 
