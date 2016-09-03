@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,twoside,frenchb,english]{book}                % options used for 'Hoofdstuk' or 'Chapter'
+                                                                                                                                                                                                                                                                                                             \documentclass[10pt,a4paper,twoside,frenchb,english]{book}                % options used for 'Hoofdstuk' or 'Chapter'
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PACKAGE LOADING TIME %%
@@ -67,6 +67,7 @@
 %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
 \graphicspath{{fig/}}
 \restylefloat{figure}
 \restylefloat{table}
@@ -79,12 +80,12 @@
 % % Header
  \noindent
  \begin{minipage}{3cm}%
-   \includegraphics*[width=2cm]{UGentlogo}% logo ugent
+   \includegraphics*[width=4cm]{AirLogo}% logo ugent
  \end{minipage}\hfill
  \begin{minipage}{8cm}
  \raggedleft
- \textsf{Ecole Centrale Paris\\
-Université Paris-Saclay}
+\includegraphics*[width=4cm]{CenLogo}% logo ugent
+
  \end{minipage}
 % 
 % % Title
@@ -118,7 +119,7 @@ Conception et dimensionnement de technologies de combustion.}
 % % Footer
  \vfill
  \begin{minipage}{2.0cm}%
-     \includegraphics*[width=2.0cm]{intec}%       % intec logo
+
  \end{minipage}\hfill
  \begin{minipage}{9cm}
  \raggedleft
@@ -130,10 +131,8 @@ Conception et dimensionnement de technologies de combustion.}
 %% INFORMATION PAGE     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 
 
 %% ACKNOWLEDGMENT   %%
@@ -192,15 +191,19 @@ Conception et dimensionnement de technologies de combustion.}
 %\newcommand{\tm}[1]{$\mbox{#1}^{\mbox{\emph{\scriptsize TM}}}$}
 
 \baselineskip 13.0pt
-\include{app1.tex}
-\include{Strategy/chapt1}
-\include{Swirl_number_review/chapt2}
-\include{Pi_theorem_Interferometry/chapt_an_dim}
 \include{chapt_filiere/chapt_filiere}
-\include{diagnostic/diagnostic}
-\include{New_burner/size_calculation}
-\include{Flame_length_review/review}
 
+\include{app1.tex}
+\include{Chapt0_Strategy/chapt1}
+\include{Chapt1_Flame_length_review/review}
+\include{Chapt1_Swirl_number_review/chapt2}
+\include{Chapt2_Pi_theorem_Interferometry/chapt_an_dim}
+
+\include{Chapt3_New_burner/size_calculation}
+\include{Chapt4_Diagnostic_work/diagnostic}
+\include{Chapt5_Experiment_results/Combustion}
+
+\include{chapt_filiere/chapt_filiere}
 \appendix
 \include{Appendice/protocole_strio}
 
